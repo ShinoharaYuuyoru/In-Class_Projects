@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config name="config.xml">
+  <phases>
+    <phase>
+      <phase skip="false" type="binary" path="F:\University Study\勉強\Grade 3 2nd\编译原理\实验\2. BITMiniCC\TestPackage\binary\1. PreProcessor.exe" name="pp" />
+      <phase skip="false" type="binary" path="F:\University Study\勉強\Grade 3 2nd\编译原理\实验\2. BITMiniCC\TestPackage\binary\2. Scanner.exe" name="scanning" />
+      <phase skip="false" type="binary" path="F:\University Study\勉強\Grade 3 2nd\编译原理\实验\2. BITMiniCC\TestPackage\binary\3. Parsing.exe" name="parsing" />
+      <phase skip="true" type="java" path="" name="semantic" />
+      <phase skip="true" type="java" path="" name="icgen" />
+      <phase skip="true" type="java" path="" name="optimizing" />
+      <phase skip="true" type="java" path="" name="codegen" />
+      <phase skip="true" type="java" path="" name="simulating" />
+    </phase>
+  </phases>
+</config>
+

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParserTree name="test.tree.xml">
+  <PROGRAM>
+    <FUNCTIONS>
+      <FUNCTION>
+        <TYPE>
+          <keyword>int</keyword>
+        </TYPE>
+        <identifier>main</identifier>
+        <separator>(</separator>
+        <ARGS>
+          <FARGS>
+            <TYPE>
+              <keyword>int</keyword>
+            </TYPE>
+            <identifier>a</identifier>
+          </FARGS>
+          <ALIST>
+            <separator>,</separator>
+            <FARGS>
+              <TYPE>
+                <keyword>int</keyword>
+              </TYPE>
+              <identifier>b</identifier>
+            </FARGS>
+            <ALIST />
+          </ALIST>
+        </ARGS>
+        <separator>)</separator>
+        <FUNC_BODY>
+          <separator>{</separator>
+          <STMTS>
+            <STMT>
+              <WHILE_STMT>
+                <keyword>while</keyword>
+                <separator>(</separator>
+                <EXPR>
+                  <TERM>
+                    <FACTOR>
+                      <identifier>a</identifier>
+                    </FACTOR>
+                    <TLIST />
+                  </TERM>
+                  <TLIST />
+                </EXPR>
+                <separator>)</separator>
+                <separator>{</separator>
+                <STMTS>
+                  <STMT>
+                    <EXPR_STMT>
+                      <EXPR>
+                        <TERM>
+                          <FACTOR>
+                            <identifier>b</identifier>
+                          </FACTOR>
+                          <TLIST />
+                        </TERM>
+                        <TLIST />
+                      </EXPR>
+                      <separator>;</separator>
+                    </EXPR_STMT>
+                  </STMT>
+                  <STMTS />
+                </STMTS>
+                <separator>}</separator>
+              </WHILE_STMT>
+            </STMT>
+            <STMT>
+              <ASSIGN_STMT>
+                <identifier>a</identifier>
+                <operator>=</operator>
+                <EXPR_STMT>
+                  <EXPR>
+                    <TERM>
+                      <FACTOR>
+                        <identifier>b</identifier>
+                      </FACTOR>
+                      <TLIST />
+                    </TERM>
+                    <TLIST />
+                  </EXPR>
+                  <separator>;</separator>
+                </EXPR_STMT>
+              </ASSIGN_STMT>
+            </STMT>
+            <STMT>
+              <RET_STMT>
+                <keyword>return</keyword>
+                <EXPR_STMT>
+                  <EXPR>
+                    <TERM>
+                      <FACTOR>
+                        <identifier>a</identifier>
+                      </FACTOR>
+                      <TLIST>
+                        <operator>+</operator>
+                        <TERM>
+                          <FACTOR>
+                            <identifier>b</identifier>
+                          </FACTOR>
+                          <TLIST />
+                        </TERM>
+                        <TLIST />
+                      </TLIST>
+                    </TERM>
+                    <TLIST />
+                  </EXPR>
+                  <separator>;</separator>
+                </EXPR_STMT>
+              </RET_STMT>
+            </STMT>
+            <STMTS />
+          </STMTS>
+          <separator>}</separator>
+        </FUNC_BODY>
+      </FUNCTION>
+      <FUNLIST />
+    </FUNCTIONS>
+  </PROGRAM>
+</ParserTree>
