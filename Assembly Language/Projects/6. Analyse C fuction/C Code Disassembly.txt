@@ -1,0 +1,106 @@
+--- c:\users\shyy\desktop\assembly language\test\test\source.cpp ---------------
+#include "stdio.h"
+#include "string.h"
+
+int main()
+{
+004026A0  push        ebp  
+004026A1  mov         ebp,esp  
+004026A3  sub         esp,0FCh  
+004026A9  push        ebx  
+004026AA  push        esi  
+004026AB  push        edi  
+004026AC  lea         edi,[ebp-0FCh]  
+004026B2  mov         ecx,3Fh  
+004026B7  mov         eax,0CCCCCCCCh  
+004026BC  rep stos    dword ptr es:[edi]  
+004026BE  mov         eax,dword ptr [__security_cookie (040A004h)]  
+004026C3  xor         eax,ebp  
+004026C5  mov         dword ptr [ebp-4],eax  
+	int	Input = 0;
+004026C8  mov         dword ptr [Input],0  
+	int	Output = 123456;
+004026CF  mov         dword ptr [Output],1E240h  
+
+	char	str1[5] = "abc";
+004026D6  mov         eax,dword ptr [string "abc" (0407B30h)]  
+004026DB  mov         dword ptr [str1],eax  
+004026DE  xor         eax,eax  
+004026E0  mov         byte ptr [ebp-24h],al  
+	char	str2[5];
+
+	scanf("%d", &Input);
+004026E3  lea         eax,[Input]  
+004026E6  push        eax  
+004026E7  push        offset string "%d" (0407B34h)  
+004026EC  call        _scanf (040122Bh)  
+004026F1  add         esp,8  
+
+	printf("%d\n", Output);
+004026F4  mov         eax,dword ptr [Output]  
+004026F7  push        eax  
+004026F8  push        offset string "%d\n" (0407B38h)  
+004026FD  call        _printf (0401325h)  
+00402702  add         esp,8  
+
+	strcpy(str2, str1);
+00402705  lea         eax,[str1]  
+00402708  push        eax  
+00402709  lea         ecx,[str2]  
+0040270C  push        ecx  
+0040270D  call        _strcpy (04010C8h)  
+00402712  add         esp,8  
+}
+00402715  xor         eax,eax  
+00402717  push        edx  
+00402718  mov         ecx,ebp  
+0040271A  push        eax  
+0040271B  lea         edx,ds:[402748h]  
+00402721  call        @_RTC_CheckStackVars@8 (040125Dh)  
+00402726  pop         eax  
+00402727  pop         edx  
+00402728  pop         edi  
+00402729  pop         esi  
+0040272A  pop         ebx  
+0040272B  mov         ecx,dword ptr [ebp-4]  
+0040272E  xor         ecx,ebp  
+00402730  call        @__security_check_cookie@4 (0401271h)  
+00402735  add         esp,0FCh  
+0040273B  cmp         ebp,esp  
+0040273D  call        __RTC_CheckEsp (0401113h)  
+00402742  mov         esp,ebp  
+00402744  pop         ebp  
+00402745  ret  
+00402746  xchg        ax,ax  
+00402748  add         eax,dword ptr [eax]  
+0040274A  add         byte ptr [eax],al  
+0040274C  push        eax  
+0040274D  daa  
+0040274E  inc         eax  
+0040274F  add         ah,dh  
+00402751  ?? ?? 
+00402752  ?? ?? 
+00402753  inc         dword ptr [eax+eax]  
+00402756  add         byte ptr [eax],al  
+00402758  jle         main+0E1h (0402781h)  
+0040275A  inc         eax  
+0040275B  add         al,bl  
+0040275D  ?? ?? 
+0040275E  ?? ?? 
+}
+0040275F  inc         dword ptr ds:[79000000h]  
+00402765  daa  
+00402766  inc         eax  
+00402767  add         al,cl  
+00402769  ?? ?? 
+0040276A  ?? ?? 
+0040276B  inc         dword ptr ds:[74000000h]  
+00402771  daa  
+00402772  inc         eax  
+00402773  add         byte ptr [ebx+74h],dh  
+00402776  jb          _main+10Ah (04027AAh)  
+00402778  add         byte ptr [ebx+74h],dh  
+0040277B  jb          _main+10Eh (04027AEh)  
+0040277D  add         byte ptr [ecx+6Eh],cl  
+00402780  jo          printf+37h (04027F7h)  
+00402782  je          _main+0E4h (0402784h)  

@@ -1,0 +1,295 @@
+Microsoft (R) Macro Assembler Version 14.00.24210.0	    11/11/17 22:16:40
+Source.asm						     Page 1 - 1
+
+
+				.386
+				.model flat, stdcall
+
+				;include	msvcrt.inc
+				includelib	msvcrt.lib
+				includelib	vcruntimed.lib
+				includelib	ucrtd.lib
+
+				scanf	PROTO C	:dword, :vararg
+				printf	PROTO C	:dword, :vararg
+
+ 00000000			.data
+ 00000000 25 73 00			szFmt	db	'%s', 0
+ 00000003 25 73 0A 00			szOut	db	'%s', 0ah, 0
+
+ 00000007 50 6C 65 61 73		FirNumM	db	'Please input the first number:'
+	   65 20 69 6E 70
+	   75 74 20 74 68
+	   65 20 66 69 72
+	   73 74 20 6E 75
+	   6D 62 65 72 3A
+ 00000025  000000FF [			FirNum	db	255 dup(0)
+	    00
+	   ]
+ 00000124 00				FirNumC	db	0
+ 00000125 00000000			FirNumP	dd	0
+ 00000129 50 6C 65 61 73		SecNumM	db	'Please input the Second number:'
+	   65 20 69 6E 70
+	   75 74 20 74 68
+	   65 20 53 65 63
+	   6F 6E 64 20 6E
+	   75 6D 62 65 72
+	   3A
+ 00000148  000000FF [			SecNum	db	255 dup(0)
+	    00
+	   ]
+ 00000247 00				SecNumC	db	0
+ 00000248 00000000			SecNumP	dd	0
+ 0000024C  0000FFFF [			Result	db	65535 dup(0)
+	    00
+	   ]
+ 0001024B 00000000			ResultC	dd	0
+ 0001024F 00000000			CutIn	dd	0
+
+ 00010253 0000FFFE			OutputP	dd	65534
+ 00010257 25 63 00			OutCha	db	'%c', 0
+ 0001025A 0A 00				OutEnt	db	0ah, 0
+
+ 00000000			.code
+ 00000000			Check	PROC
+					;First String Change
+ 00000000  A0 00000025 R		mov	AL, [FirNum]					;EAX is Chara
+ 00000005  BB 00000025 R		mov	EBX, offset FirNum				;EBX is Addr
+ 0000000A  B1 00			mov	CL, 0							;Counter
+					.while	AL != 0
+ 0000000E  2C 30				sub	AL, 48						;-48
+ 00000010  88 03				mov	[EBX], AL					;Save
+ 00000012  43					inc	EBX							;Point to Next
+ 00000013  8A 03				mov	AL, [EBX]					;Read next Num
+ 00000015  FE C1				inc	CL							;Counter++
+					.endw
+ 0000001B  4B				dec EBX
+ 0000001C  89 1D 00000125 R		mov	FirNumP, EBX
+ 00000022  88 0D 00000124 R		mov	FirNumC, CL
+
+					;Second String Change
+ 00000028  A0 00000148 R		mov	AL, [SecNum]					;EAX is Chara
+ 0000002D  BB 00000148 R		mov	EBX, offset SecNum				;EBX is Addr
+ 00000032  B1 00			mov	CL, 0							;Counter
+					.while	AL != 0
+ 00000036  2C 30				sub	AL, 48						;-48
+ 00000038  88 03				mov	[EBX], AL					;Save
+ 0000003A  43					inc	EBX							;Point to Next
+ 0000003B  8A 03				mov	AL, [EBX]					;Read next Num
+ 0000003D  FE C1				inc	CL							;Counter++
+					.endw
+ 00000043  4B				dec	EBX
+ 00000044  89 1D 00000248 R		mov	SecNumP, EBX
+ 0000004A  88 0D 00000247 R		mov	SecNumC, CL
+
+ 00000050  C3				ret
+ 00000051			Check	ENDP
+
+ 00000051			Calculate	PROC
+ 00000051  B9 00000148 R		mov	ECX, offset SecNum
+ 00000056  8B 15 00000248 R		mov	EDX, SecNumP
+					.while	EDX >= ECX
+ 00000061  8A 1A				mov	BL, [EDX]						;BL is the multiplicative number.
+
+ 00000063  51					push	ECX
+ 00000064  52					push	EDX
+ 00000065  B9 00000025 R				mov	ECX, offset FirNum
+ 0000006A  8B 15 00000125 R				mov	EDX, FirNumP
+							.while	EDX >= ECX				;ECX EDX in use
+ 00000072  53							push	EBX
+ 00000073  8A 02							mov	AL, [EDX]			;AX in use.
+ 00000075  F6 E3							mul	BL
+
+ 00000077  66| 98							cbw						;Convert Byte to Word
+ 00000079  B3 0A							mov	BL, 10
+ 0000007B  F6 F3							div	BL					;The result number is in AL, and the ADD Number to next is in AH
+
+ 0000007D  52								push	EDX
+ 0000007E  51								push	ECX
+ 0000007F  B9 0000024C R							mov	ECX, offset Result	;ECX is the base addr of Result
+ 00000084  8B 15 0001024F R							mov	EDX, CutIn
+ 0000008A  42									inc	EDX
+ 0000008B  89 15 0001024F R							mov	CutIn, EDX
+ 00000091  4A									dec	EDX
+ 00000092  03 CA								add	ECX, EDX			;ECX is now timing addr of Result
+
+ 00000094  52									push	EDX
+ 00000095  53									push	EBX
+ 00000096  8A 19									mov	BL, [ECX]		;BL is the one of the Number of Result
+ 00000098  50										push	EAX
+ 00000099  51										push	ECX
+ 0000009A  8A C4										mov	AL, AH
+ 0000009C  02 D8										add	BL, AL		;Add this time'm result number and Result Number
+												.while	1		;Confirm the next ADD Number and add them, and record final number.
+													.if	BL > 9	
+ 000000A3  80 EB 0A												sub	BL, 10
+ 000000A6  88 19												mov	[ECX], BL
+ 000000A8  41													inc	ECX
+ 000000A9  8A 19												mov	BL, [ECX]
+ 000000AB  FE C3												inc	BL
+													.else
+ 000000AF  88 19												mov	[ECX], BL
+														.break
+													.endif
+												.endw
+ 000000B5  59										pop	ECX
+ 000000B6  58										pop	EAX
+
+ 000000B7  41										inc	ECX				;Point to next Result Number
+
+ 000000B8  8A 19									mov	BL, [ECX]		;Add Result Number and this time's add number.
+ 000000BA  50										push	EAX
+ 000000BB  51										push	ECX
+ 000000BC  02 D8										add	BL, AL
+												.while	1		;Confirm the next ADD Number and add them, and record final number.
+													.if	BL > 9
+ 000000C3  80 EB 0A												sub	BL, 10
+ 000000C6  88 19												mov	[ECX], BL
+ 000000C8  41													inc	ECX
+ 000000C9  8A 19												mov	BL, [ECX]
+ 000000CB  FE C3												inc	BL
+													.else
+ 000000CF  88 19												mov	[ECX], BL
+														.break
+													.endif
+												.endw
+ 000000D5  59										pop	ECX
+ 000000D6  58										pop	EAX
+ 000000D7  5B									pop	EBX
+ 000000D8  5A									pop	EDX
+ 000000D9  59								pop ECX
+ 000000DA  5A								pop	EDX
+
+ 000000DB  4A								dec	EDX
+ 000000DC  5B							pop	EBX
+							.endw
+ 000000E1  8B 15 0001024B R				mov	EDX, ResultC
+ 000000E7  42						inc	EDX
+ 000000E8  89 15 0001024F R				mov	CutIn, EDX						;Set next position of Result Number, and ready to use in next ADD
+ 000000EE  89 15 0001024B R				mov	ResultC, EDX					;Counter++
+ 000000F4  5A					pop	EDX
+ 000000F5  59					pop	ECX
+
+ 000000F6  4A					dec	EDX
+					.endw
+
+ 000000FF  C3				ret
+ 00000100			Calculate	ENDP
+
+ 00000100			Output	PROC
+ 00000100  B8 0000024C R		mov	EAX, offset Result
+ 00000105  8B 1D 00010253 R		mov	EBX, OutputP
+ 0000010B  03 C3			add	EAX, EBX
+ 0000010D  8A 08			mov	CL, [EAX]
+
+ 0000010F  BB 0000024C R		mov	EBX, offset Result			;Get Position of the first number of Result Number
+					.while	CL == 0
+ 00000116  48					dec	EAX
+ 00000117  8A 08				mov	CL, [EAX]
+
+						.if	EAX < EBX
+ 0000011D  8B C3					mov	EAX, EBX
+							.break
+						.endif
+					.endw
+
+ 00000125  BA 0000024C R		mov	EDX, offset Result
+					.while	EAX >= EDX				;print
+ 0000012C  8A 18				mov	BL, [EAX]
+ 0000012E  80 C3 30				add	BL,	48
+ 00000131  88 18				mov	[EAX], BL
+ 00000133  50					push	EAX
+ 00000134  53					push	EBX
+ 00000135  51					push	ECX
+ 00000136  52					push	EDX
+							invoke	printf, addr OutCha, BL
+ 0000014F  5A					pop	EDX
+ 00000150  59					pop	ECX
+ 00000151  5B					pop	EBX
+ 00000152  58					pop	EAX
+ 00000153  48					dec	EAX
+					.endw
+
+					invoke	printf, addr OutEnt
+
+ 00000165  C3				ret
+ 00000166			Output ENDP
+
+ 00000166			start PROC
+					invoke	printf, addr szOut, addr FirNumM
+					invoke	scanf, addr szFmt, addr FirNum
+					;invoke	printf, addr szOut, addr FirNum
+
+					invoke	printf, addr szOut, addr SecNumM
+					invoke	scanf, addr szFmt, addr SecNum
+					;invoke	printf, addr szOut, addr SecNum
+
+					invoke	Check
+
+					invoke	Calculate
+
+					invoke	Output
+
+ 000001BD  C3				ret
+ 000001BE			start ENDP
+
+				end start
+Microsoft (R) Macro Assembler Version 14.00.24210.0	    11/11/17 22:16:40
+Source.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	32 Bit	 0001025C DWord	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 000001BE DWord	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+Calculate  . . . . . . . . . . .	P Near	 00000051 _TEXT	Length= 000000AF Public STDCALL
+Check  . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000051 Public STDCALL
+Output . . . . . . . . . . . . .	P Near	 00000100 _TEXT	Length= 00000066 Public STDCALL
+printf . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
+scanf  . . . . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External C
+start  . . . . . . . . . . . . .	P Near	 00000166 _TEXT	Length= 00000058 Public STDCALL
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+CutIn  . . . . . . . . . . . . .	DWord	 0001024F _DATA	
+FirNumC  . . . . . . . . . . . .	Byte	 00000124 _DATA	
+FirNumM  . . . . . . . . . . . .	Byte	 00000007 _DATA	
+FirNumP  . . . . . . . . . . . .	DWord	 00000125 _DATA	
+FirNum . . . . . . . . . . . . .	Byte	 00000025 _DATA	
+OutCha . . . . . . . . . . . . .	Byte	 00010257 _DATA	
+OutEnt . . . . . . . . . . . . .	Byte	 0001025A _DATA	
+OutputP  . . . . . . . . . . . .	DWord	 00010253 _DATA	
+ResultC  . . . . . . . . . . . .	DWord	 0001024B _DATA	
+Result . . . . . . . . . . . . .	Byte	 0000024C _DATA	
+SecNumC  . . . . . . . . . . . .	Byte	 00000247 _DATA	
+SecNumM  . . . . . . . . . . . .	Byte	 00000129 _DATA	
+SecNumP  . . . . . . . . . . . .	DWord	 00000248 _DATA	
+SecNum . . . . . . . . . . . . .	Byte	 00000148 _DATA	
+szFmt  . . . . . . . . . . . . .	Byte	 00000000 _DATA	
+szOut  . . . . . . . . . . . . .	Byte	 00000003 _DATA	
+
+	   0 Warnings
+	   0 Errors

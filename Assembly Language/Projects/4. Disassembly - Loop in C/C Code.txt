@@ -1,0 +1,20 @@
+#include	"stdio.h"
+
+int main()
+{
+	int	CounterA = 0;
+	int	CounterB = 0;
+	int	SignA = 100;
+	int	SignB = 0;
+
+	for (CounterB = 0; CounterB < 10; CounterB++)
+	{
+		SignB++;
+		for (CounterA = 0; CounterA < 10; CounterA++)
+		{
+			SignA--;
+		}
+	}
+
+	return	0;
+}

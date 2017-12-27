@@ -1,0 +1,64 @@
+--- c:\users\shyy\desktop\assembly language\4. disassembly - loop in c\4. disassembly - loop in c\source.cpp 
+#include	"stdio.h"
+
+int main()
+{
+013C24B0  push        ebp  
+013C24B1  mov         ebp,esp  
+013C24B3  sub         esp,0F0h  
+013C24B9  push        ebx  
+013C24BA  push        esi  
+013C24BB  push        edi  
+013C24BC  lea         edi,[ebp-0F0h]  
+013C24C2  mov         ecx,3Ch  
+013C24C7  mov         eax,0CCCCCCCCh  
+013C24CC  rep stos    dword ptr es:[edi]  
+	int	CounterA = 0;
+013C24CE  mov         dword ptr [CounterA],0  
+	int	CounterB = 0;
+013C24D5  mov         dword ptr [CounterB],0  
+	int	SignA = 100;
+013C24DC  mov         dword ptr [SignA],64h  
+	int	SignB = 0;
+013C24E3  mov         dword ptr [SignB],0  
+
+	for (CounterB = 0; CounterB < 10; CounterB++)
+013C24EA  mov         dword ptr [CounterB],0  
+013C24F1  jmp         main+4Ch (013C24FCh)  
+013C24F3  mov         eax,dword ptr [CounterB]  
+013C24F6  add         eax,1  
+013C24F9  mov         dword ptr [CounterB],eax  
+013C24FC  cmp         dword ptr [CounterB],0Ah  
+013C2500  jge         main+80h (013C2530h)  
+	{
+		SignB++;
+013C2502  mov         eax,dword ptr [SignB]  
+013C2505  add         eax,1  
+013C2508  mov         dword ptr [SignB],eax  
+		for (CounterA = 0; CounterA < 10; CounterA++)
+013C250B  mov         dword ptr [CounterA],0  
+013C2512  jmp         main+6Dh (013C251Dh)  
+013C2514  mov         eax,dword ptr [CounterA]  
+013C2517  add         eax,1  
+013C251A  mov         dword ptr [CounterA],eax  
+013C251D  cmp         dword ptr [CounterA],0Ah  
+013C2521  jge         main+7Eh (013C252Eh)  
+		{
+			SignA--;
+013C2523  mov         eax,dword ptr [SignA]  
+013C2526  sub         eax,1  
+013C2529  mov         dword ptr [SignA],eax  
+		}
+013C252C  jmp         main+64h (013C2514h)  
+	}
+013C252E  jmp         main+43h (013C24F3h)  
+
+	return	0;
+013C2530  xor         eax,eax  
+}
+013C2532  pop         edi  
+013C2533  pop         esi  
+013C2534  pop         ebx  
+013C2535  mov         esp,ebp  
+013C2537  pop         ebp  
+013C2538  ret  

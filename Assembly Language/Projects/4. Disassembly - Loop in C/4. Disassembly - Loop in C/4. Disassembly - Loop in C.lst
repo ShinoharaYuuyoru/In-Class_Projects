@@ -1,0 +1,84 @@
+Microsoft (R) Macro Assembler Version 14.00.24210.0	    12/13/16 20:53:45
+Source.asm						     Page 1 - 1
+
+
+				.386
+				.model	flat, stdcall
+
+				includelib	msvcrt.lib
+
+ 00000000			.data
+ 00000000 00000000		CounterA	dd	0
+ 00000004 00000000		CounterB	dd	0
+ 00000008 00000064		SignA		dd	100
+ 0000000C 00000000		SignB		dd	0
+
+ 00000000			.code
+ 00000000			start	PROC
+ 00000000  8B 1D 00000004 R		mov	EBX, dword ptr [CounterB]
+					.while	EBX < 10
+ 00000008  53					push	EBX
+ 00000009  8B 15 0000000C R				mov	EDX, dword ptr [SignB]
+ 0000000F  42						inc	EDX
+ 00000010  89 15 0000000C R				mov	dword ptr [SignB], EDX					;SignB++
+
+ 00000016  A1 00000000 R				mov	EAX, dword ptr [CounterA]
+							.while	EAX < 10
+ 0000001D  50							push	EAX
+ 0000001E  8B 0D 00000008 R						mov	ECX, dword ptr [SignA]
+ 00000024  49								dec	ECX
+ 00000025  89 0D 00000008 R						mov	dword ptr [SignA], ECX			;SignA--
+ 0000002B  58							pop	EAX
+ 0000002C  40							inc	EAX									;CounterA++
+							.endw
+ 00000032  5B					pop	EBX
+ 00000033  43					inc	EBX											;CounterB++
+					.endw
+ 00000039  A3 00000000 R		mov	dword ptr [CounterA], EAX
+ 0000003E  89 1D 00000004 R		mov	dword ptr [CounterB], EBX
+
+ 00000044  C3				ret
+ 00000045			start	ENDP
+				END	start
+Microsoft (R) Macro Assembler Version 14.00.24210.0	    12/13/16 20:53:45
+Source.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000010 DWord	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000045 DWord	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+start  . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000045 Public STDCALL
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+CounterA . . . . . . . . . . . .	DWord	 00000000 _DATA	
+CounterB . . . . . . . . . . . .	DWord	 00000004 _DATA	
+SignA  . . . . . . . . . . . . .	DWord	 00000008 _DATA	
+SignB  . . . . . . . . . . . . .	DWord	 0000000C _DATA	
+
+	   0 Warnings
+	   0 Errors
