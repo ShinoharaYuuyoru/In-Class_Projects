@@ -1,0 +1,5 @@
+Make:
+g++ -std=c++11 -o CopyFiles Source.cpp
+
+Go:
+./CopyFiles Source Target
