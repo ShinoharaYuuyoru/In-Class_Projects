@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "16.实验三 选择结构的程序设计实验", "16.实验三 选择结构的程序设计实验\16.实验三 选择结构的程序设计实验.vcxproj", "{78037810-BEF9-440F-8AD8-2A1DAACA9ADA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78037810-BEF9-440F-8AD8-2A1DAACA9ADA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{78037810-BEF9-440F-8AD8-2A1DAACA9ADA}.Debug|Win32.Build.0 = Debug|Win32
+		{78037810-BEF9-440F-8AD8-2A1DAACA9ADA}.Release|Win32.ActiveCfg = Release|Win32
+		{78037810-BEF9-440F-8AD8-2A1DAACA9ADA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

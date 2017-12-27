@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "55.计算子字符串个数", "55.计算子字符串个数\55.计算子字符串个数.vcxproj", "{626F2A36-C6C8-432A-B696-6A6412AE3A90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{626F2A36-C6C8-432A-B696-6A6412AE3A90}.Debug|Win32.ActiveCfg = Debug|Win32
+		{626F2A36-C6C8-432A-B696-6A6412AE3A90}.Debug|Win32.Build.0 = Debug|Win32
+		{626F2A36-C6C8-432A-B696-6A6412AE3A90}.Release|Win32.ActiveCfg = Release|Win32
+		{626F2A36-C6C8-432A-B696-6A6412AE3A90}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

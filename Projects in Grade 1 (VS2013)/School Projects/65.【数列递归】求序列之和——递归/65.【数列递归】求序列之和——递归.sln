@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "65.【数列递归】求序列之和——递归", "65.【数列递归】求序列之和——递归\65.【数列递归】求序列之和——递归.vcxproj", "{F09EC4DB-FF31-4CDF-B71D-4306597C17EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F09EC4DB-FF31-4CDF-B71D-4306597C17EE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F09EC4DB-FF31-4CDF-B71D-4306597C17EE}.Debug|Win32.Build.0 = Debug|Win32
+		{F09EC4DB-FF31-4CDF-B71D-4306597C17EE}.Release|Win32.ActiveCfg = Release|Win32
+		{F09EC4DB-FF31-4CDF-B71D-4306597C17EE}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

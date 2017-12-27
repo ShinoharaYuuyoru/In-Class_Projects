@@ -1,0 +1,2 @@
+/home/train/桌面/Project/Codes
+`pkg-config --libs --cflags gtk+-2.0`
