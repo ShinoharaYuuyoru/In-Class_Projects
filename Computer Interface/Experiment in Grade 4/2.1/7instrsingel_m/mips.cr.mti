@@ -1,0 +1,91 @@
+D:/myproject/vivado/7intr/modelsimfor7instr/dm.v {1 {vlog -work work -stats=none D:/myproject/vivado/7intr/modelsimfor7instr/dm.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module dm_4k
+
+Top level modules:
+	dm_4k
+
+} {} {}} D:/myproject/vivado/7intr/modelsimfor7instr/mips.v {1 {vlog -work work -stats=none D:/myproject/vivado/7intr/modelsimfor7instr/mips.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module mips
+
+Top level modules:
+	mips
+
+} {} {}} D:/myproject/vivado/7intr/modelsimfor7instr/processor_head.v {1 {vlog -work work -stats=none D:/myproject/vivado/7intr/modelsimfor7instr/processor_head.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+
+} {} {}} D:/myproject/vivado/7intr/modelsimfor7instr/PC.v {1 {vlog -work work -stats=none D:/myproject/vivado/7intr/modelsimfor7instr/PC.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} D:/myproject/vivado/7intr/modelsimfor7instr/nPC.v {2 {vlog -work work -stats=none D:/myproject/vivado/7intr/modelsimfor7instr/nPC.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module nPC
+** Warning: ** while parsing macro expansion: 'DEBUG_DEV_DATA' starting at D:/myproject/vivado/7intr/modelsimfor7instr/nPC.v(17)
+** at D:/myproject/vivado/7intr/modelsimfor7instr/nPC.v(17): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+
+Top level modules:
+	nPC
+
+} {} {}} D:/myproject/vivado/7intr/modelsimfor7instr/sign_Ext.v {1 {vlog -work work -stats=none D:/myproject/vivado/7intr/modelsimfor7instr/sign_Ext.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module sign_Ext
+
+Top level modules:
+	sign_Ext
+
+} {} {}} D:/myproject/vivado/7intr/modelsimfor7instr/Mux.v {1 {vlog -work work -stats=none D:/myproject/vivado/7intr/modelsimfor7instr/Mux.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module Mux_4_32
+-- Compiling module Mux_4_5
+-- Compiling module Mux_2
+
+Top level modules:
+	Mux_4_32
+	Mux_4_5
+	Mux_2
+
+} {} {}} D:/myproject/vivado/7intr/modelsimfor7instr/alu.v {1 {vlog -work work -stats=none D:/myproject/vivado/7intr/modelsimfor7instr/alu.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module ALu
+
+Top level modules:
+	ALu
+
+} {} {}} D:/myproject/vivado/7intr/modelsimfor7instr/instruction_head.v {1 {vlog -work work -stats=none D:/myproject/vivado/7intr/modelsimfor7instr/instruction_head.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+
+} {} {}} D:/myproject/vivado/7intr/modelsimfor7instr/ctrl.v {1 {vlog -work work -stats=none D:/myproject/vivado/7intr/modelsimfor7instr/ctrl.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module ctrl
+
+Top level modules:
+	ctrl
+
+} {} {}} D:/myproject/vivado/7intr/modelsimfor7instr/im.v {1 {vlog -work work -stats=none D:/myproject/vivado/7intr/modelsimfor7instr/im.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module im_4k
+
+Top level modules:
+	im_4k
+
+} {} {}} D:/myproject/vivado/7intr/modelsimfor7instr/regfile.v {1 {vlog -work work -stats=none D:/myproject/vivado/7intr/modelsimfor7instr/regfile.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module RegFile
+
+Top level modules:
+	RegFile
+
+} {} {}} D:/myproject/vivado/7intr/modelsimfor7instr/testbench.v {1 {vlog -work work -stats=none D:/myproject/vivado/7intr/modelsimfor7instr/testbench.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}}

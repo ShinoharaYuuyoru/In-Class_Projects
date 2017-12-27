@@ -1,0 +1,17 @@
+module flow_led
+(
+	input clk,
+	input clk_pulse,		// 100Mhz
+	output reg [15:0] led_r
+);
+
+reg [15:0] led_r = 16'h000f;
+
+always @(posedge clk) begin
+	if(clk_pulse == 1)
+		led_r <= {led_r[11:0], led_r[15:12]};
+	else
+		led_r <= led_r;
+end
+
+endmodule

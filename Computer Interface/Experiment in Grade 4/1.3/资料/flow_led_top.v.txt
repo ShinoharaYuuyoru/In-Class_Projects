@@ -1,0 +1,22 @@
+module flow_led_top
+(
+	input clk,		// 100Mhz
+	output [15:0] led
+);
+
+wire clk_pulse;
+
+clk_div clk_div
+(
+	.clk(clk),
+	.clk_pulse(clk_pulse)	// 1Hz
+);
+
+flow_led flow_led
+(
+	.clk(clk),
+	.clk_pulse(clk_pulse),
+	.led_r(led)
+);
+
+endmodule

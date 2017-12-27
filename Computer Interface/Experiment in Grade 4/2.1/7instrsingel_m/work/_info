@@ -1,0 +1,278 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/myaltera/summerlab/ALU
+vALu
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 OL;L;10.4;61
+r1
+!s85 0
+31
+!i10b 1
+!s100 DaS<NfNz;z:I;<4BYC<I01
+I478OOk5225Mj?Mmm@>6692
+Z2 dD:/myproject/vivado/7intr/modelsimfor7instr
+w1503369067
+8D:/myproject/vivado/7intr/modelsimfor7instr/alu.v
+FD:/myproject/vivado/7intr/modelsimfor7instr/alu.v
+L0 4
+Z3 OV;L;10.4b;61
+Z4 !s108 1503396272.000000
+!s107 instruction_head.v|D:/myproject/vivado/7intr/modelsimfor7instr/alu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/myproject/vivado/7intr/modelsimfor7instr/alu.v|
+!i113 1
+Z5 o-work work
+n@a@lu
+vctrl
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 4T0YC4]21dFcMZoL76d2K1
+I0a`l>o6X]=?oh]JlIH:6@3
+R2
+w1503395241
+8D:/myproject/vivado/7intr/modelsimfor7instr/ctrl.v
+FD:/myproject/vivado/7intr/modelsimfor7instr/ctrl.v
+L0 1
+R3
+R4
+!s107 D:/myproject/vivado/7intr/modelsimfor7instr/ctrl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/myproject/vivado/7intr/modelsimfor7instr/ctrl.v|
+!i113 1
+R5
+vdm_4k
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 5`:HVd39S:i8^9fXdlLGE2
+Iz<FdQEGF[U?FnAQL9MgM80
+R2
+w1389420560
+8D:/myproject/vivado/7intr/modelsimfor7instr/dm.v
+FD:/myproject/vivado/7intr/modelsimfor7instr/dm.v
+L0 6
+R3
+R4
+!s107 D:/myproject/vivado/7intr/modelsimfor7instr/dm.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/myproject/vivado/7intr/modelsimfor7instr/dm.v|
+!i113 1
+R5
+vim_4k
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 fSSBHR>DaZ_k9^cRQZbNf0
+IVUCJz3IjNk2@XW]IN0:;63
+R2
+w1389180386
+8D:/myproject/vivado/7intr/modelsimfor7instr/im.v
+FD:/myproject/vivado/7intr/modelsimfor7instr/im.v
+L0 1
+R3
+R4
+!s107 D:/myproject/vivado/7intr/modelsimfor7instr/im.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/myproject/vivado/7intr/modelsimfor7instr/im.v|
+!i113 1
+R5
+vmips
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 7iG[MX^FWkSX<[:3R=3Sg3
+I_@j7nNKm7cA2b9fKUZz7<2
+R2
+w1389496596
+8D:/myproject/vivado/7intr/modelsimfor7instr/mips.v
+FD:/myproject/vivado/7intr/modelsimfor7instr/mips.v
+L0 1
+R3
+R4
+!s107 D:/myproject/vivado/7intr/modelsimfor7instr/mips.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/myproject/vivado/7intr/modelsimfor7instr/mips.v|
+!i113 1
+R5
+vMux_2
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 GYd:B`f5InldM<NhN:n>U3
+IW9d9PhSN:kOO:zzzc^3oJ2
+R2
+Z6 w1503392986
+Z7 8D:/myproject/vivado/7intr/modelsimfor7instr/Mux.v
+Z8 FD:/myproject/vivado/7intr/modelsimfor7instr/Mux.v
+L0 33
+R3
+R4
+Z9 !s107 D:/myproject/vivado/7intr/modelsimfor7instr/Mux.v|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|D:/myproject/vivado/7intr/modelsimfor7instr/Mux.v|
+!i113 1
+R5
+n@mux_2
+vMux_4_32
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 hbCQfTZM260EdQE8FI3Dz0
+I6e]WJfYDA]7[[_c<ehRH:1
+R2
+R6
+R7
+R8
+L0 1
+R3
+R4
+R9
+R10
+!i113 1
+R5
+n@mux_4_32
+vMux_4_5
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 75oQdWkA67bYkA_]mlb6B0
+IkX]E<YgOHL?;d8c9H7jjY2
+R2
+R6
+R7
+R8
+L0 17
+R3
+R4
+R9
+R10
+!i113 1
+R5
+n@mux_4_5
+vnPC
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 4Q^6dM8<idPbXdb32ho_e3
+I9@YHm6N[YIegZ:[Lm3mKH2
+R2
+w1503396088
+8D:/myproject/vivado/7intr/modelsimfor7instr/nPC.v
+FD:/myproject/vivado/7intr/modelsimfor7instr/nPC.v
+L0 3
+R3
+R4
+!s107 instruction_head.v|D:/myproject/vivado/7intr/modelsimfor7instr/nPC.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/myproject/vivado/7intr/modelsimfor7instr/nPC.v|
+!i113 1
+R5
+nn@p@c
+vPC
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 LXzBk]C6V;b1j2KaE_f]Y2
+IDKFbg[3KUjTgP8TBLmAhg0
+R2
+w1389357480
+8D:/myproject/vivado/7intr/modelsimfor7instr/PC.v
+FD:/myproject/vivado/7intr/modelsimfor7instr/PC.v
+L0 1
+R3
+Z11 !s108 1503396273.000000
+!s107 D:/myproject/vivado/7intr/modelsimfor7instr/PC.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/myproject/vivado/7intr/modelsimfor7instr/PC.v|
+!i113 1
+R5
+n@p@c
+vRegFile
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 >KPNMJC2h`>e8g0N;5Z^d1
+I]Hg9bl5L[iN3LIYQ^gB@k1
+R2
+w1389497720
+8D:/myproject/vivado/7intr/modelsimfor7instr/regfile.v
+FD:/myproject/vivado/7intr/modelsimfor7instr/regfile.v
+L0 6
+R3
+R11
+!s107 D:/myproject/vivado/7intr/modelsimfor7instr/regfile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/myproject/vivado/7intr/modelsimfor7instr/regfile.v|
+!i113 1
+R5
+n@reg@file
+vsign_Ext
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 b@G3nc=_;2AD?ZNNZTmRc2
+IKQk1TW3_d4mc=;j9@YcGD3
+R2
+w1389428794
+8D:/myproject/vivado/7intr/modelsimfor7instr/sign_Ext.v
+FD:/myproject/vivado/7intr/modelsimfor7instr/sign_Ext.v
+L0 1
+R3
+R11
+!s107 D:/myproject/vivado/7intr/modelsimfor7instr/sign_Ext.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/myproject/vivado/7intr/modelsimfor7instr/sign_Ext.v|
+!i113 1
+R5
+nsign_@ext
+vtestbench
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 DD_eY2Ji4YjKhIB8BH=0m3
+IzAI_Sn=WRaBQg;:6TZflZ0
+R2
+w1503396269
+8D:/myproject/vivado/7intr/modelsimfor7instr/testbench.v
+FD:/myproject/vivado/7intr/modelsimfor7instr/testbench.v
+L0 2
+R3
+R4
+!s107 D:/myproject/vivado/7intr/modelsimfor7instr/testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/myproject/vivado/7intr/modelsimfor7instr/testbench.v|
+!i113 1
+R5

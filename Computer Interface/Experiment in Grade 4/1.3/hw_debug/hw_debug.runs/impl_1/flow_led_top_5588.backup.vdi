@@ -1,0 +1,100 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Sep  7 15:21:01 2017
+# Process ID: 5588
+# Current directory: Z:/Vivado Projects/hw_debug/hw_debug.runs/impl_1
+# Command line: vivado.exe -log flow_led_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source flow_led_top.tcl -notrace
+# Log file: Z:/Vivado Projects/hw_debug/hw_debug.runs/impl_1/flow_led_top.vdi
+# Journal file: Z:/Vivado Projects/hw_debug/hw_debug.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source flow_led_top.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.1
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc]
+Finished Parsing XDC File [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+link_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 541.422 ; gain = 260.711
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t-csg324'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+Command: report_drc (run_mandatory_drcs) for: opt_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 544.047 ; gain = 2.625
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-318] Generating core instance : dbg_hub
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.1/data/ip'.
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Sep  7 17:20:20 2017
+# Process ID: 3916
+# Current directory: Z:/Vivado Projects/hw_debug/hw_debug.runs/impl_1
+# Command line: vivado.exe -log flow_led_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source flow_led_top.tcl -notrace
+# Log file: Z:/Vivado Projects/hw_debug/hw_debug.runs/impl_1/flow_led_top.vdi
+# Journal file: Z:/Vivado Projects/hw_debug/hw_debug.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source flow_led_top.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.1
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc]
+Finished Parsing XDC File [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+link_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:35 . Memory (MB): peak = 541.281 ; gain = 260.125
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t-csg324'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+Command: report_drc (run_mandatory_drcs) for: opt_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 542.715 ; gain = 1.434
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-318] Generating core instance : dbg_hub
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.1/data/ip'.
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-318] Generating core instance : u_ila_0
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_0_CV.

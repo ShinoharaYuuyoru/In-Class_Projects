@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Sep  7 14:56:32 2017
+# Process ID: 5228
+# Current directory: Z:/Vivado Projects/hw_debug
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4872 Z:\Vivado Projects\hw_debug\hw_debug.xpr
+# Log file: Z:/Vivado Projects/hw_debug/vivado.log
+# Journal file: Z:/Vivado Projects/hw_debug\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {Z:/Vivado Projects/hw_debug/hw_debug.xpr}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1

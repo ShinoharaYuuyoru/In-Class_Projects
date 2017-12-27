@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Sep  7 19:07:25 2017
+# Process ID: 5540
+# Current directory: Z:/Vivado Projects/hw_debug
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5872 Z:\Vivado Projects\hw_debug\hw_debug.xpr
+# Log file: Z:/Vivado Projects/hw_debug/vivado.log
+# Journal file: Z:/Vivado Projects/hw_debug\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {Z:/Vivado Projects/hw_debug/hw_debug.xpr}
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {Z:/Vivado Projects/hw_debug/hw_debug.runs/impl_1/flow_led_top.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {Z:/Vivado Projects/hw_debug/hw_debug.runs/impl_1/flow_led_top.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {Z:/Vivado Projects/hw_debug/hw_debug.runs/impl_1/flow_led_top.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+save_wave_config {Z:/Vivado Projects/hw_debug/hw_debug.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {Z:/Vivado Projects/hw_debug/hw_debug.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}

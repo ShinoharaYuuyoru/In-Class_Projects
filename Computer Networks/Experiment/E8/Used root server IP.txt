@@ -1,0 +1,15 @@
+全球13个DNS根（rootDNS）服务器信息
+
+A.root-servers.net 198.41.0.4美国
+B.root-servers.net 192.228.79.201美国（另支持IPv6）
+C.root-servers.net 192.33.4.12法国
+D.root-servers.net 128.8.10.90美国
+E.root-servers.net 192.203.230.10美国
+F.root-servers.net 192.5.5.241美国（另支持IPv6）
+G.root-servers.net 192.112.36.4美国
+H.root-servers.net 128.63.2.53美国（另支持IPv6）
+I.root-servers.net 192.36.148.17瑞典
+J.root-servers.net 192.58.128.30美国
+K.root-servers.net 193.0.14.129英国（另支持IPv6）
+L.root-servers.net 198.32.64.12美国
+M.root-servers.net 202.12.27.33日本（另支持IPv6）

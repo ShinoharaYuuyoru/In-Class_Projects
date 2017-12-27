@@ -1,0 +1,278 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/7instrsingel_m
+vALu
+Z1 !s110 1505901120
+!i10b 1
+!s100 DaS<NfNz;z:I;<4BYC<I01
+IX:?cgLN[3K3>4<nKRiY[;2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1503369068
+8F:/7instrsingel_m/alu.v
+FF:/7instrsingel_m/alu.v
+L0 4
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1505901120.920000
+!s107 instruction_head.v|F:/7instrsingel_m/alu.v|
+!s90 -reportprogress|300|-work|addiAdded|F:/7instrsingel_m/alu.v|
+!i113 1
+Z4 o-work addiAdded -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@a@lu
+vctrl
+R1
+!i10b 1
+!s100 577SSZNb^8IooA56n[AdV2
+I@WUNQd6c3BEacA6Okfc?W2
+R2
+R0
+w1505901105
+8F:/7instrsingel_m/ctrl.v
+FF:/7instrsingel_m/ctrl.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1505901120.966000
+!s107 F:/7instrsingel_m/ctrl.v|
+!s90 -reportprogress|300|-work|addiAdded|F:/7instrsingel_m/ctrl.v|
+!i113 1
+R4
+vdm_4k
+Z5 !s110 1505901121
+!i10b 1
+!s100 5`:HVd39S:i8^9fXdlLGE2
+INGL0jiZnQY[zGdcCkaPCW1
+R2
+R0
+w1389420560
+8F:/7instrsingel_m/dm.v
+FF:/7instrsingel_m/dm.v
+L0 6
+R3
+r1
+!s85 0
+31
+!s108 1505901121.013000
+!s107 F:/7instrsingel_m/dm.v|
+!s90 -reportprogress|300|-work|addiAdded|F:/7instrsingel_m/dm.v|
+!i113 1
+R4
+vim_4k
+R5
+!i10b 1
+!s100 fSSBHR>DaZ_k9^cRQZbNf0
+I6KBJRI=9dJGa`0BgFlDNU2
+R2
+R0
+w1389180386
+8F:/7instrsingel_m/im.v
+FF:/7instrsingel_m/im.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1505901121.060000
+!s107 F:/7instrsingel_m/im.v|
+!s90 -reportprogress|300|-work|addiAdded|F:/7instrsingel_m/im.v|
+!i113 1
+R4
+vmips
+R5
+!i10b 1
+!s100 7iG[MX^FWkSX<[:3R=3Sg3
+IV^7:Gk>C5G8`Azi7:_c;m1
+R2
+R0
+w1389496596
+8F:/7instrsingel_m/mips.v
+FF:/7instrsingel_m/mips.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1505901121.138000
+!s107 F:/7instrsingel_m/mips.v|
+!s90 -reportprogress|300|-work|addiAdded|F:/7instrsingel_m/mips.v|
+!i113 1
+R4
+vMux_2
+R5
+!i10b 1
+!s100 GYd:B`f5InldM<NhN:n>U3
+IKaIaZGiNPaK:9:_el?HnL2
+R2
+R0
+Z6 w1503392986
+Z7 8F:/7instrsingel_m/Mux.v
+Z8 FF:/7instrsingel_m/Mux.v
+L0 33
+R3
+r1
+!s85 0
+31
+Z9 !s108 1505901121.185000
+Z10 !s107 F:/7instrsingel_m/Mux.v|
+Z11 !s90 -reportprogress|300|-work|addiAdded|F:/7instrsingel_m/Mux.v|
+!i113 1
+R4
+n@mux_2
+vMux_4_32
+R5
+!i10b 1
+!s100 hbCQfTZM260EdQE8FI3Dz0
+IK>KX0aiGh??:=bVkN6V`62
+R2
+R0
+R6
+R7
+R8
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R4
+n@mux_4_32
+vMux_4_5
+R5
+!i10b 1
+!s100 75oQdWkA67bYkA_]mlb6B0
+ICWPhb;;=8AYMfiLF6`GcI2
+R2
+R0
+R6
+R7
+R8
+L0 17
+R3
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R4
+n@mux_4_5
+vnPC
+R5
+!i10b 1
+!s100 4Q^6dM8<idPbXdb32ho_e3
+Ihe_LHaQR5mg69BJg?_XeP3
+R2
+R0
+w1503396088
+8F:/7instrsingel_m/nPC.v
+FF:/7instrsingel_m/nPC.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1505901121.247000
+!s107 instruction_head.v|F:/7instrsingel_m/nPC.v|
+!s90 -reportprogress|300|-work|addiAdded|F:/7instrsingel_m/nPC.v|
+!i113 1
+R4
+nn@p@c
+vPC
+R5
+!i10b 1
+!s100 LXzBk]C6V;b1j2KaE_f]Y2
+I0Ik;17DelNaZWV86O]=Xc1
+R2
+R0
+w1389357480
+8F:/7instrsingel_m/PC.v
+FF:/7instrsingel_m/PC.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1505901121.294000
+!s107 F:/7instrsingel_m/PC.v|
+!s90 -reportprogress|300|-work|addiAdded|F:/7instrsingel_m/PC.v|
+!i113 1
+R4
+n@p@c
+vRegFile
+R5
+!i10b 1
+!s100 >KPNMJC2h`>e8g0N;5Z^d1
+I7=DaSf]PJ;SQFnGGnR]Md3
+R2
+R0
+w1389497720
+8F:/7instrsingel_m/regfile.v
+FF:/7instrsingel_m/regfile.v
+L0 6
+R3
+r1
+!s85 0
+31
+!s108 1505901121.372000
+!s107 F:/7instrsingel_m/regfile.v|
+!s90 -reportprogress|300|-work|addiAdded|F:/7instrsingel_m/regfile.v|
+!i113 1
+R4
+n@reg@file
+vsign_Ext
+R5
+!i10b 1
+!s100 b@G3nc=_;2AD?ZNNZTmRc2
+I9BU8N5>fdAmdXaa=lgMNY0
+R2
+R0
+w1389428794
+8F:/7instrsingel_m/sign_Ext.v
+FF:/7instrsingel_m/sign_Ext.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1505901121.419000
+!s107 F:/7instrsingel_m/sign_Ext.v|
+!s90 -reportprogress|300|-work|addiAdded|F:/7instrsingel_m/sign_Ext.v|
+!i113 1
+R4
+nsign_@ext
+vtestbench
+R5
+!i10b 1
+!s100 DD_eY2Ji4YjKhIB8BH=0m3
+Ijej9^NI`iJ[j:;OaHWnm=0
+R2
+R0
+w1503396664
+8F:/7instrsingel_m/testbench.v
+FF:/7instrsingel_m/testbench.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1505901121.481000
+!s107 F:/7instrsingel_m/testbench.v|
+!s90 -reportprogress|300|-work|addiAdded|F:/7instrsingel_m/testbench.v|
+!i113 1
+R4

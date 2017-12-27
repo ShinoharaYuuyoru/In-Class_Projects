@@ -1,0 +1,325 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Sep  7 15:19:03 2017
+# Process ID: 2076
+# Current directory: Z:/Vivado Projects/hw_debug/hw_debug.runs/synth_1
+# Command line: vivado.exe -log flow_led_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source flow_led_top.tcl
+# Log file: Z:/Vivado Projects/hw_debug/hw_debug.runs/synth_1/flow_led_top.vds
+# Journal file: Z:/Vivado Projects/hw_debug/hw_debug.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source flow_led_top.tcl -notrace
+Command: synth_design -top flow_led_top -part xc7a35tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-csg324'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-csg324'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 356 
+WARNING: [Synth 8-2611] redeclaration of ansi port clk_pulse is not allowed [Z:/Vivado Projects/hw_debug/hw_debug.srcs/sources_1/new/clk_div.v:29]
+WARNING: [Synth 8-2611] redeclaration of ansi port led_r is not allowed [Z:/Vivado Projects/hw_debug/hw_debug.srcs/sources_1/new/flow_led.v:30]
+WARNING: [Synth 8-976] led_r has already been declared [Z:/Vivado Projects/hw_debug/hw_debug.srcs/sources_1/new/flow_led.v:30]
+WARNING: [Synth 8-2654] second declaration of led_r ignored [Z:/Vivado Projects/hw_debug/hw_debug.srcs/sources_1/new/flow_led.v:30]
+INFO: [Synth 8-994] led_r is declared here [Z:/Vivado Projects/hw_debug/hw_debug.srcs/sources_1/new/flow_led.v:27]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 371.691 ; gain = 89.902
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'flow_led_top' [Z:/Vivado Projects/hw_debug/hw_debug.srcs/sources_1/new/flow_led_top.v:23]
+INFO: [Synth 8-638] synthesizing module 'clk_div' [Z:/Vivado Projects/hw_debug/hw_debug.srcs/sources_1/new/clk_div.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clk_div' (1#1) [Z:/Vivado Projects/hw_debug/hw_debug.srcs/sources_1/new/clk_div.v:23]
+INFO: [Synth 8-638] synthesizing module 'flow_led' [Z:/Vivado Projects/hw_debug/hw_debug.srcs/sources_1/new/flow_led.v:23]
+INFO: [Synth 8-256] done synthesizing module 'flow_led' (2#1) [Z:/Vivado Projects/hw_debug/hw_debug.srcs/sources_1/new/flow_led.v:23]
+INFO: [Synth 8-256] done synthesizing module 'flow_led_top' (3#1) [Z:/Vivado Projects/hw_debug/hw_debug.srcs/sources_1/new/flow_led_top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 396.488 ; gain = 114.699
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 396.488 ; gain = 114.699
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc]
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[6]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[2]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[0]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[1]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[3]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[4]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[5]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[11]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[12]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[7]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[8]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[15]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[13]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[14]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[9]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[10]'. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/flow_led_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/flow_led_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 695.574 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:01:01 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:01:01 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property MARK_DEBUG = true for clk_pulse. (constraint file  {Z:/Vivado Projects/hw_debug/hw_debug.srcs/constrs_1/new/flow_led.xdc}, line 36).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:01:01 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element div_counter_reg was removed.  [Z:/Vivado Projects/hw_debug/hw_debug.srcs/sources_1/new/clk_div.v:33]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:01:01 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clk_div 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module flow_led 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element div_counter_reg was removed.  [Z:/Vivado Projects/hw_debug/hw_debug.srcs/sources_1/new/clk_div.v:33]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:03 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:26 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:26 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:01:26 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:28 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:28 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:28 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:28 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:28 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:28 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     7|
+|3     |LUT1   |    26|
+|4     |LUT5   |     2|
+|5     |LUT6   |     2|
+|6     |FDRE   |    43|
+|7     |IBUF   |     1|
+|8     |OBUF   |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------+---------+------+
+|      |Instance   |Module   |Cells |
++------+-----------+---------+------+
+|1     |top        |         |    98|
+|2     |  clk_div  |clk_div  |    64|
+|3     |  flow_led |flow_led |    16|
++------+-----------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:28 . Memory (MB): peak = 695.574 ; gain = 413.785
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 695.574 ; gain = 114.699
+Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:28 . Memory (MB): peak = 695.574 ; gain = 413.785
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+18 Infos, 22 Warnings, 16 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:34 . Memory (MB): peak = 695.574 ; gain = 422.066
+INFO: [Common 17-1381] The checkpoint 'Z:/Vivado Projects/hw_debug/hw_debug.runs/synth_1/flow_led_top.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 695.574 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Sep  7 15:20:52 2017...
